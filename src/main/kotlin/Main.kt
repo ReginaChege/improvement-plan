@@ -1,4 +1,5 @@
 import kotlin.system.exitProcess
+import kotlin.time.times
 
 fun main(){
     var  student1= Student("Ryan",20,175.5)
@@ -68,10 +69,17 @@ Shapes()
     var character6=Heroes("cytnthia",3,2)
     character5.strategy()
     character6.strategy()
+
+numb()
+    factorial()
+    odd()
+    nu()
+    average(arrayOf(4,5,6,71,23,9,8,90,76))
 }
 
+
+//Write a function that returns the product of age by 2
 class Student(var name:String,var age:Int,var height:Double){
-    //Write a function that returns the product of age by 2
     fun products():Int{
         var product=age*2
         return product
@@ -217,7 +225,64 @@ class Villians(name: String,health:Int,attackPower:Int):Characters(name,health,a
    override fun strategy(){
        println("kill them all")
    }
+
 }
+
+//if else statements.
+fun nu(){
+    var i=20
+    var r=10
+    if (i<r){
+        println("it is more")
+    }
+    else{
+        println("it is less than then r")
+    }
+}
+//Write a program in Kotlin to print the numbers from 1 to 10 using a for loop.
+fun numb(){
+    var numbers= arrayOf(1,2,3,4,5,6,7,8,9,10)
+    for (num in numbers){
+     println(num)
+    }
+}
+//Write a program in Kotlin to find the factorial of a number using a while loop.
+fun factorial(){
+val multiply=10
+    var multi=1
+    var factorial:Long=1
+    while (multi<=multiply){
+        factorial *=multi.toLong()
+        multi++
+    }
+    println("factorial of sum $multi =$factorial")
+
+}
+//Write a program in Kotlin to calculate the sum of all odd numbers between 1 and 100 using a while loop.
+fun odd(){
+    var n=1
+    var sum=0
+    while (n<100){
+     if(n%2==0){
+         println("$n is divisible by 2")
+     }
+        else{
+            println("$n is not divisible by 2")
+     }
+        n++
+        sum++
+    }
+}
+
+//Write a program in Kotlin to calculate the average of an array of numbers using a for loop.
+
+fun average(numbe:Array<Int>){
+    var r=0
+ for (r in numbe){
+     println(numbe.average())
+ }
+}
+
 
 
 
