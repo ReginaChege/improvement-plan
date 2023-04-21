@@ -75,6 +75,13 @@ numb()
     odd()
     nu()
     average(arrayOf(4,5,6,71,23,9,8,90,76))
+    println(food("sugar"))
+    origin("Uganda")
+    origin("Kenya")
+    println(numArray(arrayOf(2,3,4,6)))
+    println( twoString("AkiraChix","Campus"))
+
+   println( school("Akirachix"))
 }
 
 
@@ -280,10 +287,64 @@ fun average(numbe:Array<Int>){
     var r=0
  for (r in numbe){
      println(numbe.average())
+     println(numbe.min())
+     println(numbe.max())
  }
 }
 
+//Array
+//Write a function that takes an array of numbers and returns the sum of all the numbers in the array.
+fun numArray(numbers:Array<Int>) :Int{
+    var namu = 0
+    for (x in numbers){
+        namu+=x
 
+    }
+    return namu
+}
 
+//Write a function that takes an array of numbers and returns a new array with all the even numbers removed.
+fun arrayNumber(numb:Array<Int>):Int{
+    var even=0
+    for (i in numb){
+        if (i%2===0){
+           even++
+        }
+    }
+    return even
 
+}
+//Write a function that takes an array of strings and returns a new array with all the strings capitalized.
+fun food(items:String):String {
+//    var item="Sugar"
+    return items.uppercase()
+}
+//StringS
+//Write a function that takes a string and returns true if the string is a palindrome, false otherwise.
+fun origin(country:String){
+   if (country=="Uganda"){
+       println("True")
+   }
+    else{
+        println("False")
+   }
+}
+//Write a function that takes two strings and returns the concatenation of the two strings.
+fun twoString(a:String,b:String): String{
+    var combined=("$a$b")
+    return combined
 
+}
+//Write a function that takes a string and returns the number of vowels in the string.
+fun  school(schooll:String): Int{
+    var education = listOf("a", "e", "i", "o", "u")
+    var count=0
+    for (n in schooll) {
+         for (n in education) {
+            count++
+        }
+
+    }
+
+    return count
+}
