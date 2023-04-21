@@ -337,14 +337,14 @@ fun twoString(a:String,b:String): String{
 }
 //Write a function that takes a string and returns the number of vowels in the string.
 fun  school(schooll:String): Int{
-    var education = listOf("a", "e", "i", "o", "u")
-    var count=0
+    var education = listOf('a', 'e', 'i', 'o', 'u')
+    var count= 0
     for (n in schooll) {
-         for (n in education) {
-            count++
-        }
-
+        if (n in education){
+                 count++
+             }
     }
 
     return count
 }
+
